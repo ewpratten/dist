@@ -1,11 +1,11 @@
 [ewpratten]
-name = ewpratten
+name = Evan's Software Repository
 baseurl = https://dist.ewpratten.com/linux/fedora/$releasever/$basearch/stable
 enabled = 1
 gpgcheck = 0
 
-[ewpratten-development]
-name = ewpratten (Development Builds)
+[ewpratten-dev]
+name = Evan's Software Repository (Development Builds)
 baseurl = https://dist.ewpratten.com/linux/fedora/$releasever/$basearch/development
 enabled = 0
 gpgcheck = 0
