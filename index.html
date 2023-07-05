@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evan's Software Repository</title>
+
+    <style>
+        code {
+            background-color: #eee;
+            padding: 0.5em;
+            border-radius: 0.25em;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Evan's Software Repository</h1>
-    <ul>
-        <li>Fedora Repository: <code>https://dist.ewpratten.com/linux/fedora.repo</code></li>
-    </ul>
+
+    <div style="max-width:800px;margin:auto;">
+        <div style="text-align:center;">
+            <h1>Evan's Software Repository</h1>
+            <p>This server hosts builds of various projects I've worked on.</p>
+        </div>
+
+        <hr>
+
+        <h2>Fedora repository</h2>
+        <p>To add my Fedora repository to your system, run this command:</p>
+        <code>sudo dnf config-manager --add-repo https://dist.ewpratten.com/linux/fedora/ewpratten.repo</code>
+        <p>Once added, you can check what packages are available on your platform via:</p>
+        <code>dnf repoquery --repo ewpratten -i --refresh</code>
+
+        <h3>Enabling development builds</h3>
+        <p>Development builds are available for some packages. To enable them, run:</p>
+        <code>sudo dnf config-manager --set-enabled ewpratten-dev</code>
+
+        <br><br>
+        <hr>
+
+        <p style="text-align:center">Copyright &copy; <strong><a href="https://ewpratten.com">Evan Warren Pratten</a></strong></p>
+    </div>
 </body>
+
 </html>
